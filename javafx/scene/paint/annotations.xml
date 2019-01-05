@@ -1,0 +1,5 @@
+<root>
+    <item name='javafx.scene.paint.Color'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>

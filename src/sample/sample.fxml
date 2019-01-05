@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="642.0" prefWidth="918.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TabPane prefHeight="501.0" prefWidth="820.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Objectlayer">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="472.0" prefWidth="770.0">
+                 <GridPane fx:id="grid_object" gridLinesVisible="true" prefHeight="54.0" prefWidth="26.0">
+
+                </GridPane>
+                     <TabPane layoutX="531.0" prefHeight="407.0" prefWidth="289.0" tabClosingPolicy="UNAVAILABLE">
+                       <tabs>
+                         <Tab text="Render options">
+                           <content>
+                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                       <GridPane layoutY="7.0" prefHeight="376.0" prefWidth="292.0">
+                                         <columnConstraints>
+                                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                         </columnConstraints>
+                                         <rowConstraints>
+                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" /><RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" /><RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" /><RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" /><RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+
+
+                                         </rowConstraints>
+                                          <children>
+                                             <CheckBox fx:id="type_10" mnemonicParsing="false" onMouseClicked="#reloadMap" selected="true" text="Normal" />
+                                             <CheckBox fx:id="type_22" mnemonicParsing="false" onMouseClicked="#reloadMap" text="Ground decoration" GridPane.rowIndex="1" />
+                                             <CheckBox fx:id="type_roof" mnemonicParsing="false" onMouseClicked="#reloadMap" text="Roofs" GridPane.rowIndex="2" />
+                                             <CheckBox fx:id="type_wall" mnemonicParsing="false" onMouseClicked="#reloadMap" selected="true" text="Walls" GridPane.rowIndex="3" />
+                                             <CheckBox mnemonicParsing="false" onMouseClicked="#reloadMap" text="CheckBox" GridPane.rowIndex="4" />
+                                             <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.rowIndex="5" />
+                                             <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.rowIndex="6" />
+                                             <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.rowIndex="7" />
+                                             <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.rowIndex="8" />
+                                          </children>
+                                       </GridPane>
+                                    </children></AnchorPane>
+                           </content>
+                         </Tab>
+                         <Tab text="Edit options">
+                           <content>
+                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                       <FlowPane layoutX="14.0" layoutY="304.0" prefHeight="34.0" prefWidth="200.0">
+                                          <children>
+                                             <Label text="X:" />
+                                             <TextField fx:id="y_clean" prefHeight="25.0" prefWidth="57.0" />
+                                             <Label text="Y:" />
+                                             <TextField prefHeight="25.0" prefWidth="49.0" fx:id="x_clean" />
+                                             <Button mnemonicParsing="false" onMouseClicked="#removeArea" text="Wipe area" />
+                                          </children>
+                                       </FlowPane>
+                                       <CheckBox fx:id="delete_onclick" layoutX="14.0" layoutY="338.0" mnemonicParsing="false" text="Delete on click" />
+                                       <TextField  fx:id="object_id" layoutX="70.0" layoutY="26.0" />
+                                       <TextField fx:id="object_type" layoutX="70.0" layoutY="65.0" />
+                                       <TextField fx:id="object_rot" layoutX="70.0" layoutY="104.0" />
+                                       <Label layoutX="20.0" layoutY="30.0" text="Id" />
+                                       <Label  layoutX="12.0" layoutY="69.0" text="Type" />
+                                       <Label  layoutX="11.0" layoutY="108.0" text="Rotation" />
+                                       <Button onMouseClicked="#saveObject" layoutX="19.0" layoutY="153.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="238.0" text="Save" />
+                                    </children></AnchorPane>
+                           </content>
+                         </Tab>
+                       </tabs>
+                     </TabPane>
+            </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="MapLayer">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">  <GridPane fx:id="grid_landscape" gridLinesVisible="true" prefHeight="54.0" prefWidth="26.0">
+
+            </GridPane>
+                     <TabPane layoutX="516.0" prefHeight="408.0" prefWidth="311.0" tabClosingPolicy="UNAVAILABLE">
+                       <tabs>
+                         <Tab text="Edit options">
+                           <content>
+                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="318.0" prefWidth="219.0">
+                                    <children>
+                                       <Pane fx:id="pane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="374.0" prefWidth="311.0">
+                                          <children>
+                                             <TextField fx:id="overlayId" layoutX="114.0" layoutY="14.0" prefHeight="25.0" prefWidth="75.0" />
+                                             <TextField fx:id="underlayId" layoutX="114.0" layoutY="49.0" prefHeight="25.0" prefWidth="75.0" />
+                                             <TextField fx:id="height" layoutX="114.0" layoutY="84.0" prefHeight="25.0" prefWidth="75.0" />
+                                             <TextField fx:id="settings" layoutX="114.0" layoutY="119.0" prefHeight="25.0" prefWidth="75.0" />
+                                             <Label layoutX="47.0" layoutY="18.0" text="OverlayId" />
+                                             <Label layoutX="44.0" layoutY="53.0" text="UnderlayId" />
+                                             <Label layoutX="55.0" layoutY="88.0" text="Height" />
+                                             <Label layoutX="52.0" layoutY="123.0" text="Mask" />
+                                             <TextField fx:id="overlayrotation" layoutX="114.0" layoutY="152.0" prefHeight="25.0" prefWidth="75.0" />
+                                             <TextField fx:id="overlaypath" layoutX="114.0" layoutY="191.0" prefHeight="25.0" prefWidth="75.0" />
+                                             <Button fx:id="save" layoutX="46.0" layoutY="266.0" mnemonicParsing="false" onMouseClicked="#saveEdit" prefHeight="25.0" prefWidth="126.0" text="Save" />
+                                             <Label layoutX="17.0" layoutY="156.0" text="overlay rotation" />
+                                             <Label layoutX="39.0" layoutY="195.0" text="overlay path" />
+                                             <TextField fx:id="attrcode" layoutX="111.0" layoutY="228.0" prefHeight="25.0" prefWidth="84.0" />
+                                             <Label layoutX="42.0" layoutY="232.0" text="Attribute" />
+                                             <Button layoutX="138.0" layoutY="339.0" mnemonicParsing="false" onMouseClicked="#changeUnderlay" prefHeight="25.0" prefWidth="75.0" text="Replace u" />
+                                             <TextField fx:id="old_overlayId" layoutX="15.0" layoutY="298.0" prefHeight="25.0" prefWidth="39.0" />
+                                             <TextField fx:id="new_overlayId" layoutX="77.0" layoutY="298.0" prefHeight="25.0" prefWidth="47.0" />
+                                             <Button layoutX="135.0" layoutY="298.0" mnemonicParsing="false" onMouseClicked="#changeOverlay" prefHeight="25.0" prefWidth="75.0" text="Replace O">
+                                                <padding>
+                                                   <Insets bottom="1.0" />
+                                                </padding>
+                                             </Button>
+                                             <TextField fx:id="new_underlay" layoutX="72.0" layoutY="339.0" prefHeight="25.0" prefWidth="48.0" />
+                                             <TextField fx:id="old_underlay" layoutX="13.0" layoutY="339.0" prefHeight="25.0" prefWidth="44.0" />
+                                          </children>
+                                          <effect>
+                                             <Blend />
+                                          </effect>
+                                       </Pane>
+                                    </children>
+                                 </AnchorPane>
+                           </content>
+                         </Tab>
+                         <Tab text="Paint options">
+                           <content>
+                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                       <TextField fx:id="overlay_paint" layoutX="81.0" layoutY="32.0" prefHeight="25.0" prefWidth="124.0" />
+                                       <TextField fx:id="underlay_paint" layoutX="83.0" layoutY="67.0" prefHeight="25.0" prefWidth="122.0" />
+                                       <Label layoutX="14.0" layoutY="36.0" text="Overlay" />
+                                       <Label layoutX="14.0" layoutY="71.0" text="Underlay" />
+                                       <Label layoutX="14.0" layoutY="110.0" text="Height" />
+                                       <TextField fx:id="height_paint" layoutX="79.0" layoutY="106.0" prefHeight="25.0" prefWidth="127.0" />
+                                       <TextField fx:id="paint_mask" layoutX="79.0" layoutY="144.0" prefHeight="25.0" prefWidth="125.0" />
+                                       <TextField fx:id="paint_settings" layoutX="81.0" layoutY="180.0" prefHeight="25.0" prefWidth="123.0" />
+                                       <Label layoutX="24.0" layoutY="148.0" text="Mask" />
+                                       <Label layoutX="21.0" layoutY="184.0" text="Attribute" />
+                                       <TextField fx:id="paint_path" layoutX="81.0" layoutY="220.0" prefHeight="25.0" prefWidth="130.0" />
+                                       <Label layoutX="10.0" layoutY="224.0" text="Path overlay" />
+                                    </children>
+                                 </AnchorPane>
+                           </content>
+                         </Tab>
+                           <Tab text="overlays">
+                             <content>
+                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                       <ScrollPane layoutY="6.0">
+                                          <content>
+                                             <GridPane fx:id="overlay_grid" prefHeight="355.0" prefWidth="219.0">
+
+                              </GridPane>
+                                          </content>
+                                       </ScrollPane>
+                                    </children>
+                                 </AnchorPane>
+                             </content>
+                           </Tab>
+                           <Tab text="Underlays">
+                             <content>
+                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                       <ScrollPane layoutY="-1.0">
+                                          <content>
+                                             <GridPane fx:id="underlay_grid" prefHeight="361.0" prefWidth="226.0">
+
+                        </GridPane>
+                                          </content>
+                                       </ScrollPane>
+                                    </children>
+                                 </AnchorPane>
+                             </content>
+                           </Tab>
+                       </tabs>
+                     </TabPane>
+              </AnchorPane>
+            </content>
+
+          </Tab>
+        </tabs>
+      </TabPane>
+      <ChoiceBox fx:id="dropdown_mode" layoutX="390.0" layoutY="496.0" prefHeight="25.0" prefWidth="139.0" />
+      <Label layoutX="348.0" layoutY="500.0" text="Mode" />
+      <ScrollPane layoutY="525.0">
+         <content>
+            <TextArea fx:id="console" prefHeight="110.0" prefWidth="744.0" />
+         </content>
+      </ScrollPane>
+      <Pane layoutX="549.0" layoutY="427.0" prefHeight="93.0" prefWidth="218.0">
+         <children>
+            <Button fx:id="getmap_button" layoutX="12.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#getMap" prefHeight="25.0" prefWidth="149.0" text="Get Map" />
+            <Button fx:id="packmap" layoutX="9.0" layoutY="73.0" mnemonicParsing="false" onMouseClicked="#packMap" prefHeight="25.0" prefWidth="156.0" text="Pack map" />
+            <Button layoutX="12.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#dumpMap" prefHeight="25.0" prefWidth="149.0" text="Preview" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

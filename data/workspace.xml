@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+
+<mydoggy version="1.5.0" contentManagerEnabled="true">
+    <toolWindows>
+        <sharedWindows></sharedWindows>
+    </toolWindows>
+    <toolWindowManagerDescriptor numberingEnabled="true" previewEnabled="true" showUnavailableTools="false">
+        <pushAway pushAwayMode="VERTICAL">
+            <mode type="MOST_RECENT">
+                <anchor type="BOTTOM"/>
+                <anchor type="RIGHT"/>
+                <anchor type="LEFT"/>
+                <anchor type="TOP"/>
+            </mode>
+        </pushAway>
+    </toolWindowManagerDescriptor>
+    <contentManagerUI>
+        <TabbedContentManagerUI closeable="true" detachable="true" minimizable="true" maximizable="true" popupMenuEnabled="true" showAlwaysTab="false" tabLayout="SCROLL" tabPlacement="TOP"/>
+    </contentManagerUI>
+    <contentManager>
+        <sharedWindows></sharedWindows>
+        <contents>
+            <content id="lol" detached="false" enabled="true" selected="false" maximized="false" minimized="false" flashing="false" closeable="true" detachable="true" minimizable="true" maximizable="true" transparentMode="true" transparentDelay="0" transparentRatio="0.7" addToTaskBarWhenDetached="false" alwaysOnTop="true"></content>
+        </contents>
+    </contentManager>
+    <toolWindowBars>
+        <toolWindowBar anchor="LEFT" dividerSize="3" aggregateMode="false" length="23" visible="true" toolsVisible="true"></toolWindowBar>
+        <toolWindowBar anchor="BOTTOM" dividerSize="3" aggregateMode="false" length="23" visible="true" toolsVisible="true"></toolWindowBar>
+        <toolWindowBar anchor="RIGHT" dividerSize="3" aggregateMode="false" length="23" visible="true" toolsVisible="true"></toolWindowBar>
+        <toolWindowBar anchor="TOP" dividerSize="3" aggregateMode="false" length="23" visible="true" toolsVisible="true"></toolWindowBar>
+    </toolWindowBars>
+</mydoggy>
+

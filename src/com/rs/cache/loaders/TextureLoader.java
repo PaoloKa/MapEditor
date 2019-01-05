@@ -11,7 +11,7 @@ public class TextureLoader {
         InputStream is = new InputStream(b);
 
         def.textureRGB = is.readUnsignedShort();
-        if(def.textureRGB != 0)
+        if(def.textureRGB != 0) // no more data needed atm
             return def;
         def.field1778 = is.readByte() != 0;
         def.setId(id);

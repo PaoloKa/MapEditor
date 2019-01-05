@@ -1,7 +1,4 @@
-package sample;
-
-import com.rs.cache.definitions.OverlayDefinition;
-import com.rs.cache.definitions.UnderlayDefinition;
+package main;
 
 public class Utils {
 

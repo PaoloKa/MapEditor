@@ -1,10 +1,9 @@
-package sample;
+package main;
 
 import com.alex.store.Store;
 import com.rs.cache.ConfigType;
 import com.rs.cache.RS2Indexes;
 import com.rs.cache.definitions.*;
-import com.rs.cache.loaders.LocationLoader;
 import com.rs.cache.loaders.OverlayLoader;
 import com.rs.cache.loaders.TextureLoader;
 import com.rs.cache.loaders.UnderlayLoader;
@@ -22,7 +21,6 @@ import java.util.List;
 
 public class Main extends Application {
 
-    public static Store OSRS_CACHE;
     public static Store RS2_CACHE;
     public static List<OverlayDefinition> overlays = new ArrayList<OverlayDefinition>();
     public static List<UnderlayDefinition> underlays = new ArrayList<UnderlayDefinition>();
@@ -90,7 +88,6 @@ public class Main extends Application {
             UnderlayLoader l = new UnderlayLoader();
             if(data != null) {
                 UnderlayDefinition u = l.load(i, data);
-                //if(!overlays.contains(x))
                 underlays.add(u);
             }
 
@@ -103,7 +100,6 @@ public class Main extends Application {
             TextureLoader l = new TextureLoader();
             if(data != null) {
                 TextureDefinition x = l.load(i, data);
-                //if(!overlays.contains(x))
                 textures.add(x);
             }
 

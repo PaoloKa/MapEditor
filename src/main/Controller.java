@@ -1,4 +1,4 @@
-package sample;
+package main;
 
 import com.rs.cache.RS2Indexes;
 import com.rs.cache.definitions.*;
@@ -74,7 +74,6 @@ public class Controller implements Initializable {
     private String mode = "Select Mode";
     private MapDefinition.Tile selectedTile = null;
     private Location selectedLocation = null;
-    private MapDefinition.Tile drawTile = new MapDefinition.Tile();
     private int[] coords = new int[2];
 
     /**
@@ -107,7 +106,6 @@ public class Controller implements Initializable {
         pane.setStyle("-fx-border-color: black");
         grid_landscape.setStyle("-fx-border-color: black");
         writeOutput("Editor launched successfully.");
-    //   grid_object.setStyle("-fx-border: 2px solid; -fx-border-color: red;");
     }
 
     public void populateOverlayColors(){
@@ -191,10 +189,9 @@ public class Controller implements Initializable {
         Main.object_archiveId = objectId;
         Main.loadedMap = l.load(1,1, Main.RS2_CACHE.getIndexes()[RS2Indexes.LANDSCAPES.getIndex()].getFile(mapId,0));
         writeOutput("Loading objectfile: "+objectId);
-        grid_object.getChildren().clear();
         grid_object.setVgap(0);
         grid_object.setHgap(0);
-        byte[] objectlayer = Main.RS2_CACHE.getIndexes()[5].getFile(objectId, 0);
+        byte[] objectlayer = Main.RS2_CACHE.getIndexes()[RS2Indexes.LANDSCAPES.getIndex()].getFile(objectId, 0);
         LocationLoader loader = new LocationLoader();
         Main.loadedObjects = loader.load(1,1, objectlayer);
     }
@@ -243,7 +240,7 @@ public class Controller implements Initializable {
                         try {
                             button.setBackground(new Background(new BackgroundFill(Color.rgb(red, green, blue), CornerRadii.EMPTY, Insets.EMPTY)));
                         } catch (Exception ex){
-
+                                //can something go wrong
                         }
 
                 } if (overlay.getRgbColor() == 0xFF_00F && overlay.getSecondaryRgbColor() > 0){
@@ -397,10 +394,9 @@ public class Controller implements Initializable {
         grid_object.getChildren().clear();
         writeOutput("Drawing object map");
         preloadObjectsGrid();
-      //  grid_object.setGridLinesVisible(true);
         for(Location l : Main.loadedObjects.getLocations()){
-          /*  if(l.getPosition().getZ() >0) // only for begin will do this after
-                continue; */
+            if(l.getPosition().getZ() >0) // only for begin will do this after
+                continue;
         Button button = new Button();
         button.setMaxSize(8,8);
         button.setMinSize(8,8);
@@ -475,7 +471,6 @@ public class Controller implements Initializable {
         });
         grid_object.add(button, l.getPosition().getX(), l.getPosition().getY());
         }
-      // grid_object.setRotate(180);
 
     }
 
@@ -562,7 +557,7 @@ public class Controller implements Initializable {
             e.printStackTrace();
         }
         writeOutput("Opening viewer");
-       Process ps = Runtime.getRuntime().exec("java -jar C:\\Users\\paolo\\Desktop\\MapEditor\\Mapeditor.jar -Xmx8096");
+      //Process ps = Runtime.getRuntime().exec("java -jar C:\\Users\\paolo\\Desktop\\MapEditor\\Mapeditor.jar -Xmx8096"); //to buggy for now
        //System.out.println(p.isAlive()+" ");
        //p.waitFor();
 

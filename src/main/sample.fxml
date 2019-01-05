@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="642.0" prefWidth="918.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="642.0" prefWidth="918.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
    <children>
       <TabPane prefHeight="501.0" prefWidth="820.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -77,13 +77,13 @@
                                           </children>
                                        </FlowPane>
                                        <CheckBox fx:id="delete_onclick" layoutX="14.0" layoutY="338.0" mnemonicParsing="false" text="Delete on click" />
-                                       <TextField  fx:id="object_id" layoutX="70.0" layoutY="26.0" />
+                                       <TextField fx:id="object_id" layoutX="70.0" layoutY="26.0" />
                                        <TextField fx:id="object_type" layoutX="70.0" layoutY="65.0" />
                                        <TextField fx:id="object_rot" layoutX="70.0" layoutY="104.0" />
                                        <Label layoutX="20.0" layoutY="30.0" text="Id" />
-                                       <Label  layoutX="12.0" layoutY="69.0" text="Type" />
-                                       <Label  layoutX="11.0" layoutY="108.0" text="Rotation" />
-                                       <Button onMouseClicked="#saveObject" layoutX="19.0" layoutY="153.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="238.0" text="Save" />
+                                       <Label layoutX="12.0" layoutY="69.0" text="Type" />
+                                       <Label layoutX="11.0" layoutY="108.0" text="Rotation" />
+                                       <Button layoutX="19.0" layoutY="153.0" mnemonicParsing="false" onMouseClicked="#saveObject" prefHeight="25.0" prefWidth="238.0" text="Save" />
                                     </children></AnchorPane>
                            </content>
                          </Tab>
@@ -208,7 +208,7 @@
          <children>
             <Button fx:id="getmap_button" layoutX="12.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#getMap" prefHeight="25.0" prefWidth="149.0" text="Get Map" />
             <Button fx:id="packmap" layoutX="9.0" layoutY="73.0" mnemonicParsing="false" onMouseClicked="#packMap" prefHeight="25.0" prefWidth="156.0" text="Pack map" />
-            <Button layoutX="12.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#dumpMap" prefHeight="25.0" prefWidth="149.0" text="Preview" />
+            <Button layoutX="12.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#dumpMap" prefHeight="25.0" prefWidth="149.0" text="Dump" />
          </children>
       </Pane>
    </children>

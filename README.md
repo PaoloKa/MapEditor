@@ -1,5 +1,5 @@
 # MapEditor
-A runescape 2D mapeditor for the 503+ revision. This is still a work in progress, let me know if you have any issues. You can edit, preview,dump and pack your packs. This editor was made with the 667 revision of Runescape but should work with lower and higher revisions (not RS3)
+A runescape 2D mapeditor for the 503+ revision. This is still a work in progress, let me know if you have any issues. You can edit, preview,dump and pack your packs. This editor was made with the 667 revision of Runescape but should work with lower and higher revisions (not RS3). This tools makes use of alex his cache lib and refactoring from the Runelite client. This tool was made for education.
 # Landscape editor
 ### Features
 - Edit overlays, underlays,height,mask, figure and rotation of a single tile

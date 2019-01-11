@@ -22,6 +22,7 @@ import java.util.List;
 public class Main extends Application {
 
     public static Store RS2_CACHE;
+    public static Store OSRS_CACHE;
     public static List<OverlayDefinition> overlays = new ArrayList<OverlayDefinition>();
     public static List<UnderlayDefinition> underlays = new ArrayList<UnderlayDefinition>();
     public static List<TextureDefinition> textures = new ArrayList<TextureDefinition>();
@@ -60,6 +61,7 @@ public class Main extends Application {
 
         try {
             RS2_CACHE = new Store("C:/Users/paolo/Dropbox/Zaria 667/data/cache/");
+            OSRS_CACHE = new Store("D:/Rsps/RSPSi Map Editor/fullCache/");
         } catch (IOException e) {
             e.printStackTrace();
         }

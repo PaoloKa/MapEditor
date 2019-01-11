@@ -620,4 +620,15 @@ public class Controller implements Initializable {
         loadObjects();
 
     }
+
+    /**
+     * gets all the objects from the map, packs them into your cache and changes the id in the file
+     * @param mouseEvent
+     */
+    public void packOsrsMap(MouseEvent mouseEvent) {
+        LocationsDefinition def = Main.loadedObjects;
+        for(Location l : def.getLocations()){
+            
+        }
+    }
 }

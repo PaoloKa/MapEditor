@@ -1,5 +1,8 @@
 package com.rs.cache;
 
+import lombok.Getter;
+import lombok.Setter;
+
 public enum OsrsIndexes {
 
     FRAMES(0),
@@ -33,7 +36,8 @@ public enum OsrsIndexes {
     TERTIARY_SOUND_EFFECTS(15),
     WORLD_MAP(16);
 
-    public final int indice, archive;
+    @Getter @Setter
+    private final int indice, archive;
 
     private OsrsIndexes(final int indice, final int archive) {
         this.indice = indice;

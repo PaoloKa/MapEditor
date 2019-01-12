@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class ObjectSaver
 {
-    public byte[] save(ObjectDefinition obj)
+    public static byte[] save(ObjectDefinition obj)
     {
         OutputStream2 out = new OutputStream2();
         if (obj.getObjectTypes() != null && obj.getObjectModels() != null)

@@ -195,6 +195,15 @@
             </content>
 
           </Tab>
+            <Tab text="Osrs packer">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="188.0" onMouseClicked="#packOsrsMap" layoutY="162.0" mnemonicParsing="false" text="pack" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
         </tabs>
       </TabPane>
       <ChoiceBox fx:id="dropdown_mode" layoutX="390.0" layoutY="496.0" prefHeight="25.0" prefWidth="139.0" />

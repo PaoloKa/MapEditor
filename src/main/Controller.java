@@ -26,6 +26,7 @@ import javafx.scene.paint.Color;
 
 import java.io.*;
 import java.net.URL;
+import java.nio.file.Files;
 import java.time.LocalDateTime;
 import java.util.Iterator;
 import java.util.Optional;
@@ -348,8 +349,9 @@ public class Controller implements Initializable {
     public void packMap(MouseEvent mouseEvent) {
         packmap.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
-                Main.RS2_CACHE.getIndexes()[RS2Indexes.LANDSCAPES.getIndex()].putFile(Main.map_archiveId,0, MapSaver.getData(Main.loadedMap));
-                Main.RS2_CACHE.getIndexes()[RS2Indexes.LANDSCAPES.getIndex()].putFile(Main.object_archiveId,0, LocationSaver.getData(Main.loadedObjects));
+               // Main.RS2_CACHE.getIndexes()[RS2Indexes.LANDSCAPES.getIndex()].putFile(Main.map_archiveId,0, MapSaver.getData(Main.loadedMap));
+                //Main.RS2_CACHE.getIndexes()[RS2Indexes.LANDSCAPES.getIndex()].putFile(Main.object_archiveId,0, LocationSaver.getData(Main.loadedObjects));
+                DataPacker.packMap(LocationSaver.getData(Main.loadedObjects),MapSaver.getData(Main.loadedMap));
                 writeOutput("Packed map to cache." +Main.map_archiveId);
             }
         });
@@ -627,7 +629,26 @@ public class Controller implements Initializable {
      */
     public void packOsrsMap(MouseEvent mouseEvent) {
         try {
-            DataPacker.readLoop();
+            TextInputDialog dialog = new TextInputDialog();
+            dialog.setTitle("Regio finder");
+            dialog.setHeaderText("Enter the coords you would like to edit.  x,y");
+            dialog.setContentText("Please enter your coords:");
+            Optional<String> result = dialog.showAndWait();
+            if (result.isPresent()){
+                String[] coords_txt = result.get().split(",");
+                int archiveId = Utils.getArchiveIdOsrs(Integer.parseInt(coords_txt[0]),Integer.parseInt(coords_txt[1]));
+                int objectLayer = Utils.getMapArchiveIdOsrs(Integer.parseInt(coords_txt[0]),Integer.parseInt(coords_txt[1]));
+                System.out.println(archiveId+ " "+objectLayer);
+                byte[] locationData  = Files.readAllBytes(new File("C:\\Users\\paolo\\Desktop\\2807.dat").toPath());//Main.OSRS_CACHE.getIndexes()[5].getFile(objectLayer,0);
+                byte[] mapData = Files.readAllBytes(new File("C:\\Users\\paolo\\Desktop\\2806.dat").toPath());//Main.OSRS_CACHE.getIndexes()[5].getFile(archiveId,0);
+                if(locationData != null && mapData != null)
+                    DataPacker.readLoop(locationData,mapData);
+                else
+                    System.out.println("Data is null.");
+                if(locationData == null)
+                    System.out.println("Location is null");
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -3,10 +3,14 @@ package main;
 import com.alex.store.Store;
 import com.rs.cache.Cache;
 import com.rs.cache.OsrsIndexes;
+import com.rs.cache.RS2Indexes;
 import com.rs.cache.definitions.Location;
 import com.rs.cache.definitions.LocationsDefinition;
 import com.rs.cache.definitions.ObjectDefinition;
+import com.rs.cache.loaders.LocationLoader;
 import com.rs.cache.loaders.ObjectLoader;
+import com.rs.cache.saver.LocationSaver;
+import com.rs.cache.saver.MapSaver;
 import com.rs.cache.saver.ObjectSaver;
 
 import java.io.IOException;
@@ -28,17 +32,27 @@ public class DataPacker {
      * loops throu the whole maplayers and packs every object
      * @throws IOException
      */
-    public static void readLoop() throws IOException {
-        LocationsDefinition def = Main.loadedObjects;
+    public static void readLoop(byte[] objectlayer, byte[] mapLayer ) throws IOException {
+        if(objectlayer == null)
+            System.out.println("is null ");
+        if(mapLayer == null)
+            System.out.println(" Also null");
+        LocationLoader location = new LocationLoader();
+        LocationsDefinition def = location.load(0,0,objectlayer);
         for(Location l : def.getLocations()){
-            int id = addObject(l.getId());
-            if(id != -1)
-            l.setId(id);
-        }
+            if(l == null)
+                continue;
+           if(l.getId() > 0) {
+               int id = addObject(l.getId());
+               if (id != -1)
+                   l.setId(id);
+           }
 
-        for(Location l : def.getLocations()){
-            System.out.println(l.getId());
         }
+        packMap(LocationSaver.getData(def),mapLayer);
+
+
+
     }
 
     /**
@@ -48,20 +62,26 @@ public class DataPacker {
      * @throws IOException
      */
     public static int addObject(int osrsID) throws IOException {
-        byte[] data = osrs.getIndexes()[OsrsIndexes.OBJECT_DEFINITIONS.getIndice()].getFile(OsrsIndexes.OBJECT_DEFINITIONS.getArchive(), osrsID);
+        byte[] data = osrs.getIndexes()[2].getFile(6, osrsID);
         ObjectDefinition def = ObjectLoader.load(osrsID, data);
         if(packedObjects.containsKey(osrsID)) // not adding already existing objects again xD
             return packedObjects.get(osrsID);
+        if(def == null){
+            System.out.println("Def is null for object Id "+osrsID);
+            return -1;
+        }
         if(def.getObjectModels() == null)
             return -1;
         for(int i = 0; i < def.getObjectModels().length; i++){
             def.getObjectModels()[i] = packModel(def.getObjectModels()[i]);
         }
+
+        byte[] rawData = ObjectSaver.save(def);
+
         objectArchiveLastID++;
         packedObjects.put(osrsID, objectArchiveLastID);
-        byte[] rawData = ObjectSaver.save(def);
         System.out.println("Packed object "+osrsID+ " into "+objectArchiveLastID);
-      //  Cache.STORE.getIndexes()[16].putFile(getArchiveId(objectArchiveLastID),objectArchiveLastID & 0xff, rawData);
+        toPack.getIndexes()[16].putFile(getArchiveId(objectArchiveLastID),objectArchiveLastID & 0xff, rawData);
         return objectArchiveLastID;
 
     }
@@ -86,11 +106,16 @@ public class DataPacker {
                     System.out.println("Osrs model data is null -> data not packed");
                     return -1;
                 }
-                //toPack.getIndexes()[7].putFile(modelArchiveLastID, 0, modelData);
+                toPack.getIndexes()[7].putFile(modelArchiveLastID, 0, modelData);
                 /*if(toPack.getIndexes()[7].getFile(modelArchiveLastID, 0) != null)
                     System.out.println("MODEL PACKED SUCCESFULLY");*/
                 return modelArchiveLastID;
             }
+    }
+
+    public static void packMap(byte[] objectLayer, byte[] mapLayer){
+        toPack.getIndexes()[RS2Indexes.LANDSCAPES.getIndex()].putFile(4570,0, mapLayer);
+        toPack.getIndexes()[RS2Indexes.LANDSCAPES.getIndex()].putFile(4572,0,  objectLayer);
     }
 
     /**

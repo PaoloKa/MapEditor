@@ -10,5 +10,6 @@
     <orderEntry type="library" name="guava-19.0" level="application" />
     <orderEntry type="library" name="lombok" level="project" />
     <orderEntry type="library" name="guava-23.0" level="application" />
+    <orderEntry type="library" name="commons-io-2" level="project" />
   </component>
 </module>

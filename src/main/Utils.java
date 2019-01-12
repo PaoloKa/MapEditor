@@ -18,6 +18,15 @@ public class Utils {
         return mapArchiveId;
     }
 
+    public static int getArchiveIdOsrs(int x, int y){
+        int regionId = (x >> 6 << 8)  + (y >> 6);
+        int regionX = (regionId >> 8) * 64;
+        int regionY = (regionId & 0xff) * 64;
+        int mapArchiveId = Main.OSRS_CACHE.getIndexes()[5].getArchiveId("m" + ((regionX >> 3) / 8) + "_" + ((regionY >> 3) / 8));
+
+        return mapArchiveId;
+    }
+
     /**
      * gets the objects layer
      * @param x
@@ -32,8 +41,18 @@ public class Utils {
         return landscapeArchiveId;
     }
 
+    public static int getMapArchiveIdOsrs(int x, int y) {
+        int regionId = (x >> 6 << 8) + (y >> 6);
+        int regionX = (regionId >> 8) * 64;
+        int regionY = (regionId & 0xff) * 64;
+        int x2 = regionId >> 8;
+        int y2 = regionId & 0xFF;
+        int landscapeArchiveId = Main.OSRS_CACHE.getIndexes()[5].getArchiveId("l"+x2+ "_"+y2);
+        return landscapeArchiveId;
 
-    public static int adjustRGB(int var0, double var1)
+    }
+
+        public static int adjustRGB(int var0, double var1)
     {
         double var3 = (double) (var0 >> 16) / 256.0D;
         double var5 = (double) (var0 >> 8 & 255) / 256.0D;

@@ -9,7 +9,7 @@ import java.util.Map;
 public class ObjectLoader
 {
 
-    public ObjectDefinition load(int id, byte[] b)
+    public static ObjectDefinition load(int id, byte[] b)
     {
         ObjectDefinition def = new ObjectDefinition();
         InputStream2 is = new InputStream2(b);
@@ -32,7 +32,7 @@ public class ObjectLoader
         return def;
     }
 
-    private void processOp(int opcode, ObjectDefinition def, InputStream2 is)
+    private static void processOp(int opcode, ObjectDefinition def, InputStream2 is)
     {
         if (opcode == 1)
         {
@@ -352,7 +352,7 @@ public class ObjectLoader
     }
 
 
-    private void post(ObjectDefinition def)
+    private static void post(ObjectDefinition def)
     {
         if (def.getAnInt2088() == -1)
         {

@@ -411,7 +411,7 @@ public class Controller implements Initializable {
        if(l.getType() == 10)
             button.setStyle("-fx-background-color : cornflowerblue;");
         else if(l.getType() == 22)
-            button.setStyle("-fx-background-color : GOLDENROD; fx)tra" );
+            button.setStyle("-fx-background-color : GOLDENROD" );
         else if(l.getType() == 11)
            button.setStyle("-fx-background-color : GREEN;");
         if(l.getType() == 0 || l.getType() == 2) {
@@ -626,9 +626,10 @@ public class Controller implements Initializable {
      * @param mouseEvent
      */
     public void packOsrsMap(MouseEvent mouseEvent) {
-        LocationsDefinition def = Main.loadedObjects;
-        for(Location l : def.getLocations()){
-            
+        try {
+            DataPacker.readLoop();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

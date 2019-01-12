@@ -61,7 +61,7 @@ public class Main extends Application {
 
         try {
             RS2_CACHE = new Store("C:/Users/paolo/Dropbox/Zaria 667/data/cache/");
-            OSRS_CACHE = new Store("D:/Rsps/RSPSi Map Editor/fullCache/");
+           OSRS_CACHE = new Store("C:\\Users\\paolo\\Desktop\\RSPSi Map Editor\\cache--\\");
         } catch (IOException e) {
             e.printStackTrace();
         }

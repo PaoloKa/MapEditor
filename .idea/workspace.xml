@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/Controller.java" line="235" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/Controller.java" line="279" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/Controller.java" line="237" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/Controller.java" line="281" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ConfigPropertyValues.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapEditor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MapEditor.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MapEditor/com/alex/io/OutputStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/com/alex/io/OutputStream.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MapEditor/com/alex/io/OutputStream2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/com/alex/io/OutputStream2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MapEditor/com/rs/cache/definitions/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/com/rs/cache/definitions/Location.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MapEditor/com/rs/cache/definitions/ObjectDefinition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MapEditor/com/rs/cache/loaders/LocationLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/com/rs/cache/loaders/LocationLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MapEditor/com/rs/cache/loaders/ObjectLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/com/rs/cache/loaders/ObjectLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MapEditor/com/rs/cache/saver/LocationSaver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/com/rs/cache/saver/LocationSaver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MapEditor/com/rs/cache/saver/ObjectSaver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/com/rs/cache/saver/ObjectSaver.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MapEditor/main/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/main/Controller$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MapEditor/main/Controller$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/main/Controller$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MapEditor/main/Controller$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/main/Controller$3.class" afterDir="false" />
@@ -25,45 +17,10 @@
       <change beforePath="$PROJECT_DIR$/out/production/MapEditor/main/Controller$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/main/Controller$6.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MapEditor/main/Controller$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/main/Controller$7.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MapEditor/main/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/main/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MapEditor/main/DataPacker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/main/DataPacker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MapEditor/main/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/main/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MapEditor/main/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/main/Main$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MapEditor/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MapEditor/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/alex/io/OutputStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/alex/io/OutputStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/alex/io/OutputStream2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/alex/io/OutputStream2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/fs/Archive.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/fs/ArchiveFiles.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/fs/Container.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/fs/FSFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/fs/Index.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/fs/Storage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/fs/Store.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/fs/jagex/CompressionType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/fs/jagex/DataFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/fs/jagex/DataFileWriteResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/fs/jagex/DiskStorage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/fs/jagex/IndexEntry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/fs/jagex/IndexFile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/index/ArchiveData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/index/FileData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/index/IndexData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/io/InputStream.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/io/OutputStream.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/util/BZip2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/util/Crc32.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/util/Djb2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/util/Djb2Manager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/util/GZip.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/util/IDClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/util/Namer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/util/Xtea.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/osrscache/util/XteaKeyManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/cache/definitions/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/cache/definitions/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/cache/definitions/ObjectDefinition.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/cache/loaders/LocationLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/cache/loaders/LocationLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/cache/loaders/ObjectLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/cache/loaders/ObjectLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/cache/saver/LocationSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/cache/saver/LocationSaver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/rs/cache/saver/ObjectSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/rs/cache/saver/ObjectSaver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/DataPacker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DataPacker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -126,7 +83,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rs/cache/saver/LocationSaver.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
@@ -139,9 +96,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/nio/ByteBuffer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="395" selection-start-line="395" selection-end-line="395" />
+              <folding>
+                <element signature="e#12420#12421#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/alex/io/InputStream2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
+            <state relative-caret-position="226">
               <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#794#795#0" expanded="true" />
@@ -151,10 +120,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/alex/io/InputStream.java">
+        <entry file="file://$PROJECT_DIR$/src/main/DataPacker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+            <state relative-caret-position="603">
+              <caret line="180" column="20" selection-start-line="180" selection-start-column="20" selection-end-line="180" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -162,8 +131,37 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="190" column="39" lean-forward="true" selection-start-line="190" selection-start-column="39" selection-end-line="190" selection-end-column="40" />
+            <state relative-caret-position="199">
+              <caret line="91" column="17" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#23300#23301#0" expanded="true" />
+                <element signature="e#23377#23378#0" expanded="true" />
+                <element signature="e#27242#27243#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OverlayIds">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="69" selection-start-line="1" selection-start-column="69" selection-end-line="1" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/ConfigPropertyValues.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -172,15 +170,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/sample.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-          <provider editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rs/cache/loaders/LocationLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
+            <state relative-caret-position="226">
               <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
@@ -189,39 +181,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-296">
-              <caret line="75" column="22" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/HeightCalc.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-330">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/rs/cache/saver/MapSaver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/alex/io/OutputStream.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3926">
-              <caret line="51" column="31" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
-              <folding>
-                <element signature="e#6286#6287#0" expanded="true" />
-                <element signature="e#6319#6320#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="305">
+              <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -237,7 +198,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>grid_</find>
       <find>wall</find>
       <find>pack</find>
       <find>delete</find>
@@ -267,6 +227,7 @@
       <find>smart</find>
       <find>writesm</find>
       <find>osrs</find>
+      <find>init</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -280,9 +241,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/utils/HeightCalc.java" />
-        <option value="$PROJECT_DIR$/src/com/rs/cache/definitions/Region.java" />
-        <option value="$PROJECT_DIR$/src/com/rs/cache/definitions/MapDefinition.java" />
         <option value="$PROJECT_DIR$/src/com/rs/cache/saver/MapImageDumper.java" />
         <option value="$PROJECT_DIR$/src/com/rs/cache/loaders/RegionLoader.java" />
         <option value="$PROJECT_DIR$/src/com/rs/cache/definitions/Position.java" />
@@ -329,8 +287,11 @@
         <option value="$PROJECT_DIR$/src/com/alex/io/OutputStream2.java" />
         <option value="$PROJECT_DIR$/src/com/rs/cache/saver/LocationSaver.java" />
         <option value="$PROJECT_DIR$/src/main/DataPacker.java" />
+        <option value="$PROJECT_DIR$/src/ConfigPropertyValues.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/src/main/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/ConfigPropertyValues.java" />
+        <option value="$PROJECT_DIR$/config.properties" />
       </list>
     </option>
   </component>
@@ -342,10 +303,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
+    <option name="x" value="424" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1338" />
+    <option name="height" value="1100" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -366,81 +327,13 @@
             <path>
               <item name="MapEditor" type="b2602c69:ProjectViewProjectNode" />
               <item name="MapEditor" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MapEditor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MapEditor" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MapEditor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MapEditor" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="MapEditor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MapEditor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MapEditor" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="MapEditor" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MapEditor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MapEditor" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MapEditor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MapEditor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MapEditor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MapEditor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="alex" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MapEditor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MapEditor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="alex" type="462c0819:PsiDirectoryNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MapEditor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MapEditor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="cache" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MapEditor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MapEditor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="cache" type="462c0819:PsiDirectoryNode" />
-              <item name="saver" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MapEditor" type="b2602c69:ProjectViewProjectNode" />
               <item name="MapEditor" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MapEditor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MapEditor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -460,7 +353,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551607043331" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551610815806" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -470,6 +363,10 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\paolo\Dropbox\Tools\MapEditor" />
+      <recent name="C:\Users\paolo\Dropbox\Tools\MapEditor\src\main" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="sample" />
       <recent name="com.rs.cache.loaders" />
@@ -584,12 +481,12 @@
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1547634382585" duration="50000" />
       <workItem from="1547641588244" duration="5620000" />
-      <workItem from="1551606186354" duration="726000" />
+      <workItem from="1551606186354" duration="3244000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7698000" />
+    <option name="totallyTimeSpent" value="10216000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -601,10 +498,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18336888" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18963616" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -613,7 +510,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32882413" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25568798" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24506749" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -624,10 +521,11 @@
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" weight="0.33714882" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.3261105" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32606438" />
       <window_info anchor="bottom" id="Problems" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" weight="0.32882413" />
       <window_info anchor="bottom" id="Terminal" order="16" weight="0.3298647" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" side_tool="true" weight="0.32995737" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -698,34 +596,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/osrscache/util/Crc32.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/osrscache/util/Djb2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/osrscache/util/Djb2Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/osrscache/util/GZip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/osrscache/util/IDClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-183">
@@ -970,13 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/DataPacker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="180" column="20" selection-start-line="180" selection-start-column="20" selection-end-line="180" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/alex/io/OutputStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3926">
@@ -1005,43 +868,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/alex/io/InputStream2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#794#795#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/rs/cache/loaders/LocationLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/sample.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="190" column="39" lean-forward="true" selection-start-line="190" selection-start-column="39" selection-end-line="190" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-296">
-          <caret line="75" column="22" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/HeightCalc.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1064,6 +893,80 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/nio/ByteBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="395" selection-start-line="395" selection-end-line="395" />
+          <folding>
+            <element signature="e#12420#12421#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OverlayIds">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/ConfigPropertyValues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/DataPacker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="180" column="20" selection-start-line="180" selection-start-column="20" selection-end-line="180" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="91" column="17" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#23300#23301#0" expanded="true" />
+            <element signature="e#23377#23378#0" expanded="true" />
+            <element signature="e#27242#27243#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/alex/io/InputStream2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#794#795#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rs/cache/loaders/LocationLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="69" selection-start-line="1" selection-start-column="69" selection-end-line="1" selection-end-column="69" />
         </state>
       </provider>
     </entry>

@@ -31,6 +31,7 @@ public class Main extends Application {
     public static int object_archiveId =  4572;//1565 ;
     public static MapDefinition loadedMap = null;
     public static LocationsDefinition loadedObjects = null;
+    public static ConfigPropertyValues properties;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -57,11 +58,13 @@ public class Main extends Application {
     }
 
 
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws IOException {
+        properties = new ConfigPropertyValues();
+        properties.setPropValues();
+        map_archiveId = properties.getMap_archiveId();
+        object_archiveId = properties.getObject_archiveId();
         try {
-            RS2_CACHE = new Store("C:\\Users\\paolo\\Dropbox\\Zaria 667\\data\\cache backup before javafx\\");
-           OSRS_CACHE = new Store("C:\\Users\\paolo\\Documents\\New folder\\osrs-176\\osrs-server\\data\\cache\\");
+            RS2_CACHE = new Store(properties.getCache_path());
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -86,9 +86,11 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         writeOutput("Starting editor.");
-        getMapData(Main.map_archiveId, Main.object_archiveId);
-        loadMap();
-        loadObjects();
+        if(Main.object_archiveId != -1 && Main.object_archiveId != -1) { //so it will not crash for non existing regions
+            getMapData(Main.map_archiveId, Main.object_archiveId);
+            loadMap();
+            loadObjects();
+        }
         populateOverlayColors();
         populatUnderlayColors();
         ObservableList<String> options = FXCollections.observableArrayList(

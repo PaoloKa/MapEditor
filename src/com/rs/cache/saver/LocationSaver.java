@@ -25,22 +25,20 @@ public class LocationSaver
         int prevId = -1;
         for (Integer id : locById.keySet())
         {
+
             int diffId = id - prevId;
             prevId = id;
+            out.b(diffId);
+                Collection<Location> locations = locById.get(id);
+                int position = 0;
+                for (Location loc : locations)
+                {
+                    int packedPosition = (loc.getPosition().getZ() << 12)
+                            | (loc.getPosition().getX() << 6)
+                            | (loc.getPosition().getY());
 
-            out.writeShortSmart(diffId);
-
-            Collection<Location> locations = locById.get(id);
-            int position = 0;
-            for (Location loc : locations)
-            {
-                int packedPosition = (loc.getPosition().getZ() << 12)
-                        | (loc.getPosition().getX() << 6)
-                        | (loc.getPosition().getY());
-
-                int diffPos = packedPosition - position;
+                    int diffPos = packedPosition - position;
                 position = packedPosition;
-
                 out.writeShortSmart(diffPos + 1);
 
                 int packedAttributes = (loc.getType() << 2) | loc.getOrientation();

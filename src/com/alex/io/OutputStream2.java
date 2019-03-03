@@ -84,6 +84,20 @@ public final class OutputStream2 extends java.io.OutputStream
     }
 
 
+    public void writeBigSmart(int value)
+    {
+        Preconditions.checkArgument(value >= 0);
+        if (value >= 32768)
+        {
+            ensureRemaining(4);
+            this.writeInt((1 << 31) | value);
+        }
+        else
+        {
+            ensureRemaining(2);
+            this.writeShort(value);
+        }
+    }
 
     public void write24BitInt(int i)
     {
@@ -132,6 +146,14 @@ public final class OutputStream2 extends java.io.OutputStream
         this.getArray()[this.getOffset() - var1 - 1] = (byte) var1;
     }
 
+    public void writeSmart(int i) {
+        if (i >= 128) {
+            writeShort(i + 32768);
+        } else {
+            writeByte(i);
+        }
+    }
+
     public void writeShortSmart(int value)
     {
         Preconditions.checkArgument(value >= 0);
@@ -143,6 +165,26 @@ public final class OutputStream2 extends java.io.OutputStream
         {
             writeShort(0x8000 | value);
         }
+    }
+
+
+
+    public final void b(int paramInt)
+    {
+        if (paramInt > 32767)
+        {
+            paramInt = paramInt;
+            writeShort(32767);
+            paramInt -= 32767;
+            while (paramInt > 0)
+            {
+                int i = paramInt > 32767 ? 32767 : paramInt;
+                paramInt -= i;
+                writeShort(i);
+            }
+            return;
+        }
+        writeShort(paramInt);
     }
 
     public void writeString(String str)

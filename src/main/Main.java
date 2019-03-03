@@ -27,8 +27,8 @@ public class Main extends Application {
     public static List<UnderlayDefinition> underlays = new ArrayList<UnderlayDefinition>();
     public static List<TextureDefinition> textures = new ArrayList<TextureDefinition>();
     public static boolean p_pressed = false;
-    public static int map_archiveId =   3320;//1565 ;
-    public static int object_archiveId =   3322;//1565 ;
+    public static int map_archiveId =   4570;//1565 ;
+    public static int object_archiveId =  4572;//1565 ;
     public static MapDefinition loadedMap = null;
     public static LocationsDefinition loadedObjects = null;
 
@@ -60,7 +60,7 @@ public class Main extends Application {
     public static void main(String[] args) {
 
         try {
-            RS2_CACHE = new Store("C:/Users/paolo/Dropbox/Zaria 667/data/cache/");
+            RS2_CACHE = new Store("C:\\Users\\paolo\\Dropbox\\Zaria 667\\data\\cache backup before javafx\\");
            OSRS_CACHE = new Store("C:\\Users\\paolo\\Documents\\New folder\\osrs-176\\osrs-server\\data\\cache\\");
         } catch (IOException e) {
             e.printStackTrace();

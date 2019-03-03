@@ -1,16 +1,14 @@
 package main;
 
 import com.alex.store.Store;
-import com.rs.cache.Cache;
-import com.rs.cache.OsrsIndexes;
 import com.rs.cache.RS2Indexes;
 import com.rs.cache.definitions.Location;
 import com.rs.cache.definitions.LocationsDefinition;
-import com.rs.cache.definitions.ObjectDefinition;
+import com.rs.cache.definitions.OsrsObjectDefinition;
+import com.rs.cache.definitions.Rs2ObjectDefinitions;
 import com.rs.cache.loaders.LocationLoader;
 import com.rs.cache.loaders.ObjectLoader;
 import com.rs.cache.saver.LocationSaver;
-import com.rs.cache.saver.MapSaver;
 import com.rs.cache.saver.ObjectSaver;
 
 import java.io.IOException;
@@ -39,19 +37,27 @@ public class DataPacker {
             System.out.println(" Also null");
         LocationLoader location = new LocationLoader();
         LocationsDefinition def = location.load(0,0,objectlayer);
-        for(Location l : def.getLocations()){
+        for(int i = 0; i < def.getLocations().size(); i++){
+            Location l = def.getLocations().get(i);
             if(l == null)
                 continue;
            if(l.getId() > 0) {
-               int id = addObject(l.getId());
-               if (id != -1)
-                   l.setId(id);
+               try {
+                   int id = addObject(l.getId());
+                   if (id != -1)
+                       def.getLocations().get(i).setId(id);
+                   //   l.setId(id);
+               } catch(Exception ex){
+                   System.out.println("Couldn't load object data.");
+               }
            }
 
         }
+        for(Location l : def.getLocations()){
+            System.out.println(l.getId());
+        }
+
         packMap(LocationSaver.getData(def),mapLayer);
-
-
 
     }
 
@@ -63,27 +69,102 @@ public class DataPacker {
      */
     public static int addObject(int osrsID) throws IOException {
         byte[] data = osrs.getIndexes()[2].getFile(6, osrsID);
-        ObjectDefinition def = ObjectLoader.load(osrsID, data);
-        if(packedObjects.containsKey(osrsID)) // not adding already existing objects again xD
+        OsrsObjectDefinition def = ObjectLoader.load(osrsID, data);
+        Rs2ObjectDefinitions o667 = Rs2ObjectDefinitions.getObjectDefinitions(1);
+        if(packedObjects.containsKey(osrsID)) {// not adding already existing objects again xD
+           System.out.println("Object "+osrsID+" was already packed");
             return packedObjects.get(osrsID);
+        }
         if(def == null){
             System.out.println("Def is null for object Id "+osrsID);
             return -1;
         }
         if(def.getObjectModels() == null)
             return -1;
-        for(int i = 0; i < def.getObjectModels().length; i++){
-            def.getObjectModels()[i] = packModel(def.getObjectModels()[i]);
+        /**
+         * setting data
+         */
+        //name
+
+        if(def.getName() != null && def.getName() != "" && def.getName()!= "null")
+            o667.name = def.getName();
+        else
+            o667.name = "";
+        //object types
+        if(def.getObjectTypes() != null) {
+            if(osrsID == 10064)
+             System.out.println(def.getObjectTypes().length+" id: "+osrsID);
+            o667.possibleTypes = new byte[def.getObjectTypes().length];
+            for( int i = 0; i < def.getObjectTypes().length; i ++) {
+                o667.possibleTypes[i] = (byte)def.getObjectTypes()[i];
+            }
+        } else {
+            o667.possibleTypes = new byte[1];
+            o667.possibleTypes[0] = 10;
+        }
+        //animating if possible (won't work for everything)
+        o667.objectAnimation  = def.getAnimationID();
+        o667.originalColors = def.getRecolorToFind();
+        o667.modifiedColors = def.getRecolorToReplace();
+        /**
+         * walls
+         */
+        if(isWall(def)) {
+            int length = def.getObjectModels().length;
+            o667.modelIds = new int[ def.getObjectModels().length][1];
+            for(int i = 0; i < length; i++) {
+                int packedModel = packModel(def.getObjectModels()[i]);
+                if(packedModel != -1) //never know
+                    o667.modelIds[i][0] = packedModel;
+            }
+        } else { //normal packing
+            o667.modelIds = new int[1][def.getObjectModels().length];
+            for(int i =0; i < o667.modelIds[0].length; i++) {
+                int packedModel = packModel(def.getObjectModels()[i]);
+                if(packedModel != -1) //never know
+                    o667.modelIds[0][i] = packedModel;
+
+            }
         }
 
-        byte[] rawData = ObjectSaver.save(def);
-
+        /* TODO in encode */
+        o667.modelSizeX = def.getModelSizeX();
+        o667.modelSizeY = def.getModelSizeY();
+        o667.modelHeight = def.getModelSizeHeight();
+        o667.modelHeightOffset = def.getOffsetHeight();
+        o667.ignoreClipOnAlternativeRoute = def.isSolid();
+        o667.yOffset = def.getOffsetY();
+        o667.secondBool = def.isABool2104();
+        o667.contrast = def.getContrast();
+      /*  if(def.getAnInt2105() == 0)
+            o667.aByte3912 = 1;*/
+        if(def.isABool2111())
+            o667.thirdInt = 1;
+        if(def.isBlocksProjectile())
+            o667.projectileCliped = true;
+        o667.rotated = def.isRotated();
+        o667.sizeX = def.getSizeX();
+        o667.sizeY = def.getSizeY();
+        o667.nonFlatShading = def.isNonFlatShading();
+        o667.options = def.getActions();
+        byte[] rawData = o667.encode();
         objectArchiveLastID++;
         packedObjects.put(osrsID, objectArchiveLastID);
         System.out.println("Packed object "+osrsID+ " into "+objectArchiveLastID);
         toPack.getIndexes()[16].putFile(getArchiveId(objectArchiveLastID),objectArchiveLastID & 0xff, rawData);
         return objectArchiveLastID;
 
+    }
+
+    private static boolean isWall(OsrsObjectDefinition obj) {
+        if(obj.getObjectTypes() == null) {
+            return false;
+        }
+        for(int i=0; i < obj.getObjectTypes().length;i++) {
+            if(obj.getObjectTypes()[i] != 10 && obj.getObjectTypes()[i] != 11 && obj.getObjectTypes()[i] != 22 )
+                return true;
+        }
+        return false;
     }
 
     /**

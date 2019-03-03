@@ -46,27 +46,4 @@ public class Location
         this.type = type;
     }
 
-    @Override
-    public boolean equals(Object obj)
-    {
-        if (this == obj)
-        {
-            return true;
-        }
-        if (obj == null)
-        {
-            return false;
-        }
-        if (getClass() != obj.getClass())
-        {
-            return false;
-        }
-        final Location other = (Location) obj;
-        if (this.position.getX() == other.getPosition().getX() && this.position.getY() == other.getPosition().getY() && other.getId() == this.getId())
-        {
-            return true;
-        }
-
-        return false;
-    }
 }

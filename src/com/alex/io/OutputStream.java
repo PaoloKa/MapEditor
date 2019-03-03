@@ -40,6 +40,21 @@ public final class OutputStream extends Stream {
 		}
 
 	}
+
+	/**
+	 * final int readSmart2(boolean bool) {
+	 * 		anInt6964++;
+	 * 		int i = 0;
+	 * 		int i_6_;
+	 * 		for (i_6_ = readSmart(); i_6_ == 32767; i_6_ = readSmart())
+	 * 			i += 32767;
+	 * 		i += i_6_;
+	 * 		if (bool != true) {
+	 * 			buffer = null;
+	 *                }
+	 * 		return i;* 	}
+	 * @param value
+	 */
 	
 	 public void writeHugeSmart(int value) {
 	        while (value > 0) {
@@ -327,6 +342,8 @@ public final class OutputStream extends Stream {
 		offset = 0;
 		writeBytes(out, 0, out.length);
 	}
+
+
 
 	private static final int BIT_MASK[];
 	private int opcodeStart;

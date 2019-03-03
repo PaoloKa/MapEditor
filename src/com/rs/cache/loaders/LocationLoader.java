@@ -26,8 +26,10 @@ public class LocationLoader
 
         while ((idOffset = buf.readUnsignedIntSmartShortCompat()) != 0)
         {
-            id += idOffset;
 
+
+            id += idOffset;
+            System.out.println(id+" "+idOffset);
             int position = 0;
             int positionOffset;
 

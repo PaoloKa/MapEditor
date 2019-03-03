@@ -4,6 +4,7 @@ import com.rs.cache.RS2Indexes;
 import com.rs.cache.definitions.*;
 import com.rs.cache.loaders.LocationLoader;
 import com.rs.cache.loaders.MapLoader;
+import com.rs.cache.loaders.ObjectLoader;
 import com.rs.cache.saver.LocationSaver;
 import com.rs.cache.saver.MapSaver;
 import javafx.beans.value.ChangeListener;
@@ -399,6 +400,7 @@ public class Controller implements Initializable {
         for(Location l : Main.loadedObjects.getLocations()){
             if(l.getPosition().getZ() >0) // only for begin will do this after
                 continue;
+
         Button button = new Button();
         button.setMaxSize(8,8);
         button.setMinSize(8,8);
@@ -410,6 +412,7 @@ public class Controller implements Initializable {
             continue;
         if(l.getType() >= 12 && l.getType() < 22 && !type_roof.isSelected())
             continue;
+
        if(l.getType() == 10)
             button.setStyle("-fx-background-color : cornflowerblue;");
         else if(l.getType() == 22)
@@ -456,9 +459,12 @@ public class Controller implements Initializable {
                     coords[0] = rowIndex;
                     coords[1] = colIndex;
                     writeOutput("objectId: "+l.getId()+" type: "+l.getType()+" rotation: "+l.getOrientation()+ " "+l.getPosition());
+                   //
                     setObjectValues(l);
                     if(delete_onclick.isSelected()){
                         writeOutput("Removed object :"+l.getId());
+
+
                         Main.loadedObjects.getLocations().remove(l);
                         button.setStyle(null);
                     }
@@ -616,10 +622,18 @@ public class Controller implements Initializable {
     }
 
     public void saveObject(MouseEvent mouseEvent) {
-        int index = Main.loadedObjects.getLocations().indexOf(selectedLocation);
+
+       /* int index = Main.loadedObjects.getLocations().indexOf(selectedLocation);
         Main.loadedObjects.getLocations().get(index).setId(Integer.parseInt(object_id.getText()));
         writeOutput("Object saved");
-        loadObjects();
+        loadObjects();*/
+        byte[] data = Main.OSRS_CACHE.getIndexes()[2].getFile(6, 10064);
+        OsrsObjectDefinition def = ObjectLoader.load(10064, data);
+        if(def == null)
+            System.out.println("is null");
+     //   System.out.println(def.getObjectModels().length);
+      //  System.out.println(def.getObjectTypes().length);
+
 
     }
 
@@ -638,9 +652,9 @@ public class Controller implements Initializable {
                 String[] coords_txt = result.get().split(",");
                 int archiveId = Utils.getArchiveIdOsrs(Integer.parseInt(coords_txt[0]),Integer.parseInt(coords_txt[1]));
                 int objectLayer = Utils.getMapArchiveIdOsrs(Integer.parseInt(coords_txt[0]),Integer.parseInt(coords_txt[1]));
-                System.out.println(archiveId+ " "+objectLayer);
-                byte[] locationData  = Files.readAllBytes(new File("C:\\Users\\paolo\\Desktop\\2807.dat").toPath());//Main.OSRS_CACHE.getIndexes()[5].getFile(objectLayer,0);
-                byte[] mapData = Files.readAllBytes(new File("C:\\Users\\paolo\\Desktop\\2806.dat").toPath());//Main.OSRS_CACHE.getIndexes()[5].getFile(archiveId,0);
+
+                byte[] locationData  = Files.readAllBytes(new File("C:\\Users\\paolo\\Desktop\\1947.dat").toPath());//Main.OSRS_CACHE.getIndexes()[5].getFile(objectLayer,0);
+                byte[] mapData =  Files.readAllBytes(new File("C:\\Users\\paolo\\Desktop\\1946.dat").toPath());//Main.OSRS_CACHE.getIndexes()[5].getFile(archiveId,0);
                 if(locationData != null && mapData != null)
                     DataPacker.readLoop(locationData,mapData);
                 else

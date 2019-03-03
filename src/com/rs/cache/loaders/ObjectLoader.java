@@ -1,7 +1,7 @@
 package com.rs.cache.loaders;
 
 import com.alex.io.InputStream2;
-import com.rs.cache.definitions.ObjectDefinition;
+import com.rs.cache.definitions.OsrsObjectDefinition;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,9 +9,9 @@ import java.util.Map;
 public class ObjectLoader
 {
 
-    public static ObjectDefinition load(int id, byte[] b)
+    public static OsrsObjectDefinition load(int id, byte[] b)
     {
-        ObjectDefinition def = new ObjectDefinition();
+        OsrsObjectDefinition def = new OsrsObjectDefinition();
         InputStream2 is = new InputStream2(b);
 
         def.setId(id);
@@ -32,7 +32,7 @@ public class ObjectLoader
         return def;
     }
 
-    private static void processOp(int opcode, ObjectDefinition def, InputStream2 is)
+    private static void processOp(int opcode, OsrsObjectDefinition def, InputStream2 is)
     {
         if (opcode == 1)
         {
@@ -352,7 +352,7 @@ public class ObjectLoader
     }
 
 
-    private static void post(ObjectDefinition def)
+    private static void post(OsrsObjectDefinition def)
     {
         if (def.getAnInt2088() == -1)
         {

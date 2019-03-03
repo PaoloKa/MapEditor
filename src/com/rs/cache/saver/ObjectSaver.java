@@ -1,23 +1,28 @@
 package com.rs.cache.saver;
 
 import com.alex.io.OutputStream2;
-import com.rs.cache.definitions.ObjectDefinition;
+import com.rs.cache.definitions.OsrsObjectDefinition;
 
 import java.util.Map;
 
 public class ObjectSaver
 {
-    public static byte[] save(ObjectDefinition obj)
+    public static byte[] save(OsrsObjectDefinition obj)
     {
         OutputStream2 out = new OutputStream2();
         if (obj.getObjectTypes() != null && obj.getObjectModels() != null)
         {
             out.writeByte(1);
-            out.writeByte(obj.getObjectTypes().length);
-            for (int i = 0; i < obj.getObjectTypes().length; ++i)
+            out.writeByte(obj.getObjectModels().length);
+           /* for (int i = 0; i < obj.getObjectTypes().length; ++i)
             {
                 out.writeShort(obj.getObjectModels()[i]);
                 out.writeByte(obj.getObjectTypes()[i]);
+            }*/
+            for (int i = 0; i < obj.getObjectModels().length; i++) {
+                out.writeByte(obj.getObjectTypes()[i]);
+                out.writeByte(1);
+                out.writeBigSmart(obj.getObjectModels()[i]);
             }
         }
         if (obj.getName() != null)

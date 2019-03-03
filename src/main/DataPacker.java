@@ -195,8 +195,8 @@ public class DataPacker {
     }
 
     public static void packMap(byte[] objectLayer, byte[] mapLayer){
-        toPack.getIndexes()[RS2Indexes.LANDSCAPES.getIndex()].putFile(4570,0, mapLayer);
-        toPack.getIndexes()[RS2Indexes.LANDSCAPES.getIndex()].putFile(4572,0,  objectLayer);
+        toPack.getIndexes()[RS2Indexes.LANDSCAPES.getIndex()].putFile(Main.map_archiveId,0, mapLayer);
+        toPack.getIndexes()[RS2Indexes.LANDSCAPES.getIndex()].putFile(Main.object_archiveId,0,  objectLayer);
     }
 
     /**

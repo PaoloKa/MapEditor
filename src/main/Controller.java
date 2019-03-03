@@ -645,15 +645,8 @@ public class Controller implements Initializable {
      */
     public void packOsrsMap(MouseEvent mouseEvent) {
         try {
-            TextInputDialog dialog = new TextInputDialog();
-            dialog.setTitle("Regio finder");
-            dialog.setHeaderText("Enter the coords you would like to edit.  x,y");
-            dialog.setContentText("Please enter your coords:");
-            Optional<String> result = dialog.showAndWait();
-            if (result.isPresent()){
-                String[] coords_txt = result.get().split(",");
-                int archiveId = Utils.getArchiveIdOsrs(Integer.parseInt(coords_txt[0]),Integer.parseInt(coords_txt[1]));
-                int objectLayer = Utils.getMapArchiveIdOsrs(Integer.parseInt(coords_txt[0]),Integer.parseInt(coords_txt[1]));
+                //int archiveId = Utils.getArchiveIdOsrs(Integer.parseInt(coords_txt[0]),Integer.parseInt(coords_txt[1]));
+                //int objectLayer = Utils.getMapArchiveIdOsrs(Integer.parseInt(coords_txt[0]),Integer.parseInt(coords_txt[1]));
 
                 byte[] locationData  = Files.readAllBytes(new File("C:\\Users\\paolo\\Desktop\\1947.dat").toPath());//Main.OSRS_CACHE.getIndexes()[5].getFile(objectLayer,0);
                 byte[] mapData =  Files.readAllBytes(new File("C:\\Users\\paolo\\Desktop\\1946.dat").toPath());//Main.OSRS_CACHE.getIndexes()[5].getFile(archiveId,0);
@@ -663,7 +656,6 @@ public class Controller implements Initializable {
                     System.out.println("Data is null.");
                 if(locationData == null)
                     System.out.println("Location is null");
-            }
 
         } catch (IOException e) {
             e.printStackTrace();

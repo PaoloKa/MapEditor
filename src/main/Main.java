@@ -65,6 +65,7 @@ public class Main extends Application {
         object_archiveId = properties.getObject_archiveId();
         try {
             RS2_CACHE = new Store(properties.getCache_path());
+            OSRS_CACHE = new Store("D:\\Rsps\\RSPSi Map Editor\\fullCache\\");
         } catch (IOException e) {
             e.printStackTrace();
         }

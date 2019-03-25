@@ -196,6 +196,8 @@ public class Controller implements Initializable {
         grid_object.setVgap(0);
         grid_object.setHgap(0);
         byte[] objectlayer = Main.RS2_CACHE.getIndexes()[RS2Indexes.LANDSCAPES.getIndex()].getFile(objectId, 0);
+        if(objectlayer == null)
+            writeOutput("ObjectDataArchiva was null.");
         LocationLoader loader = new LocationLoader();
         Main.loadedObjects = loader.load(1,1, objectlayer);
     }

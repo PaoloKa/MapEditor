@@ -22,76 +22,6 @@
    <children>
       <TabPane prefHeight="501.0" prefWidth="820.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Objectlayer">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="472.0" prefWidth="770.0">
-                 <GridPane fx:id="grid_object" gridLinesVisible="true" prefHeight="54.0" prefWidth="26.0">
-
-                </GridPane>
-                     <TabPane layoutX="531.0" prefHeight="407.0" prefWidth="289.0" tabClosingPolicy="UNAVAILABLE">
-                       <tabs>
-                         <Tab text="Render options">
-                           <content>
-                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                    <children>
-                                       <GridPane layoutY="7.0" prefHeight="376.0" prefWidth="292.0">
-                                         <columnConstraints>
-                                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                         </columnConstraints>
-                                         <rowConstraints>
-                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" /><RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" /><RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" /><RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" /><RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-
-
-                                         </rowConstraints>
-                                          <children>
-                                             <CheckBox fx:id="type_10" mnemonicParsing="false" onMouseClicked="#reloadMap" selected="true" text="Normal" />
-                                             <CheckBox fx:id="type_22" mnemonicParsing="false" onMouseClicked="#reloadMap" text="Ground decoration" GridPane.rowIndex="1" />
-                                             <CheckBox fx:id="type_roof" mnemonicParsing="false" onMouseClicked="#reloadMap" text="Roofs" GridPane.rowIndex="2" />
-                                             <CheckBox fx:id="type_wall" mnemonicParsing="false" onMouseClicked="#reloadMap" selected="true" text="Walls" GridPane.rowIndex="3" />
-                                             <CheckBox mnemonicParsing="false" onMouseClicked="#reloadMap" text="CheckBox" GridPane.rowIndex="4" />
-                                             <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.rowIndex="5" />
-                                             <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.rowIndex="6" />
-                                             <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.rowIndex="7" />
-                                             <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.rowIndex="8" />
-                                          </children>
-                                       </GridPane>
-                                    </children></AnchorPane>
-                           </content>
-                         </Tab>
-                         <Tab text="Edit options">
-                           <content>
-                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                    <children>
-                                       <FlowPane layoutX="14.0" layoutY="304.0" prefHeight="34.0" prefWidth="200.0">
-                                          <children>
-                                             <Label text="X:" />
-                                             <TextField fx:id="y_clean" prefHeight="25.0" prefWidth="57.0" />
-                                             <Label text="Y:" />
-                                             <TextField prefHeight="25.0" prefWidth="49.0" fx:id="x_clean" />
-                                             <Button mnemonicParsing="false" onMouseClicked="#removeArea" text="Wipe area" />
-                                          </children>
-                                       </FlowPane>
-                                       <CheckBox fx:id="delete_onclick" layoutX="14.0" layoutY="338.0" mnemonicParsing="false" text="Delete on click" />
-                                       <TextField fx:id="object_id" layoutX="70.0" layoutY="26.0" />
-                                       <TextField fx:id="object_type" layoutX="70.0" layoutY="65.0" />
-                                       <TextField fx:id="object_rot" layoutX="70.0" layoutY="104.0" />
-                                       <Label layoutX="20.0" layoutY="30.0" text="Id" />
-                                       <Label layoutX="12.0" layoutY="69.0" text="Type" />
-                                       <Label layoutX="11.0" layoutY="108.0" text="Rotation" />
-                                       <Button layoutX="19.0" layoutY="153.0" mnemonicParsing="false" onMouseClicked="#saveObject" prefHeight="25.0" prefWidth="238.0" text="Save" />
-                                    </children></AnchorPane>
-                           </content>
-                         </Tab>
-                       </tabs>
-                     </TabPane>
-            </AnchorPane>
-            </content>
-          </Tab>
           <Tab text="MapLayer">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">  <GridPane fx:id="grid_landscape" gridLinesVisible="true" prefHeight="54.0" prefWidth="26.0">
@@ -195,11 +125,81 @@
             </content>
 
           </Tab>
-            <Tab text="Osrs packer">
+          <Tab text="Objectlayer">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="472.0" prefWidth="770.0">
+                 <GridPane fx:id="grid_object" gridLinesVisible="true" prefHeight="54.0" prefWidth="26.0">
+
+                </GridPane>
+                     <TabPane layoutX="531.0" prefHeight="407.0" prefWidth="289.0" tabClosingPolicy="UNAVAILABLE">
+                       <tabs>
+                         <Tab text="Render options">
+                           <content>
+                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                       <GridPane layoutY="7.0" prefHeight="376.0" prefWidth="292.0">
+                                         <columnConstraints>
+                                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                         </columnConstraints>
+                                         <rowConstraints>
+                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" /><RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" /><RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" /><RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" /><RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+
+
+                                         </rowConstraints>
+                                          <children>
+                                             <CheckBox fx:id="type_10" mnemonicParsing="false" onMouseClicked="#reloadMap" selected="true" text="Normal" />
+                                             <CheckBox fx:id="type_22" mnemonicParsing="false" onMouseClicked="#reloadMap" text="Ground decoration" GridPane.rowIndex="1" />
+                                             <CheckBox fx:id="type_roof" mnemonicParsing="false" onMouseClicked="#reloadMap" text="Roofs" GridPane.rowIndex="2" />
+                                             <CheckBox fx:id="type_wall" mnemonicParsing="false" onMouseClicked="#reloadMap" selected="true" text="Walls" GridPane.rowIndex="3" />
+                                             <CheckBox mnemonicParsing="false" onMouseClicked="#reloadMap" text="CheckBox" GridPane.rowIndex="4" />
+                                             <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.rowIndex="5" />
+                                             <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.rowIndex="6" />
+                                             <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.rowIndex="7" />
+                                             <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.rowIndex="8" />
+                                          </children>
+                                       </GridPane>
+                                    </children></AnchorPane>
+                           </content>
+                         </Tab>
+                         <Tab text="Edit options">
+                           <content>
+                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                       <FlowPane layoutX="14.0" layoutY="304.0" prefHeight="34.0" prefWidth="200.0">
+                                          <children>
+                                             <Label text="X:" />
+                                             <TextField fx:id="y_clean" prefHeight="25.0" prefWidth="57.0" />
+                                             <Label text="Y:" />
+                                             <TextField prefHeight="25.0" prefWidth="49.0" fx:id="x_clean" />
+                                             <Button mnemonicParsing="false" onMouseClicked="#removeArea" text="Wipe area" />
+                                          </children>
+                                       </FlowPane>
+                                       <CheckBox fx:id="delete_onclick" layoutX="14.0" layoutY="338.0" mnemonicParsing="false" text="Delete on click" />
+                                       <TextField fx:id="object_id" layoutX="70.0" layoutY="26.0" />
+                                       <TextField fx:id="object_type" layoutX="70.0" layoutY="65.0" />
+                                       <TextField fx:id="object_rot" layoutX="70.0" layoutY="104.0" />
+                                       <Label layoutX="20.0" layoutY="30.0" text="Id" />
+                                       <Label layoutX="12.0" layoutY="69.0" text="Type" />
+                                       <Label layoutX="11.0" layoutY="108.0" text="Rotation" />
+                                       <Button layoutX="19.0" layoutY="153.0" mnemonicParsing="false" onMouseClicked="#saveObject" prefHeight="25.0" prefWidth="238.0" text="Save" />
+                                    </children></AnchorPane>
+                           </content>
+                         </Tab>
+                       </tabs>
+                     </TabPane>
+            </AnchorPane>
+            </content>
+          </Tab>
+            <Tab disable="true" text="Osrs packer">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Button layoutX="188.0" onMouseClicked="#packOsrsMap" layoutY="162.0" mnemonicParsing="false" text="pack" />
+                        <Button layoutX="188.0" layoutY="162.0" mnemonicParsing="false" onMouseClicked="#packOsrsMap" text="pack" />
                      </children>
                   </AnchorPane>
               </content>

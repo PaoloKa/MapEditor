@@ -19,6 +19,10 @@ public class LocationLoader
 
     private void loadLocations(LocationsDefinition loc, byte[] b)
     {
+        if(b == null) {
+            System.out.println("Couldn't load since data is null");
+            return;
+        }
         InputStream2 buf = new InputStream2(b);
 
         int id = -1;

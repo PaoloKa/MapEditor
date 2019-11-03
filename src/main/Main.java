@@ -116,6 +116,7 @@ public class Main extends Application {
      * for testing all the textures
      */
     public static List<OverlayDefinition> defs = new ArrayList<OverlayDefinition>();
+
     private static void getTextureOverlay(){
         for(OverlayDefinition def : overlays){
             if(def.getTexture() > 0){

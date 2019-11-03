@@ -3,6 +3,10 @@ A runescape 2D mapeditor for the 503+ revision. This is still a work in progress
 # Setup
 Find config.properties and change your cache path. (be sure to use //)
 cache_path=your//path//here//
+
+Required Librarys
+- Guava
+- Lombok (make sure the enable annotation processing in Intelij if using)
 # Landscape editor
 ### Features
 - Edit overlays, underlays,height,mask, figure and rotation of a single tile
